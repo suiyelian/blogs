@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>如何在github.io搭建Hugo博客 - Jane - A super concise theme for Hugo</title>
+  <link rel="alternate" hreflang="zh-cn" href="https://suiyelian.github.io/" />
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta name="MobileOptimized" content="width"/>
+<meta name="HandheldFriendly" content="true"/>
+
+
+<meta name="applicable-device" content="pc,mobile">
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+
+<meta name="author" content="xianmin" />
+  <meta name="description" content="类继承 0 经典类和新式类 首先得说明的是,Python的类分为经典类 和 新式类 经典类是python2.2之前的东西,但是在2.7还在兼容,但是在3" />
+
+  <meta name="keywords" content="Hugo, theme, jane" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.38.2" />
+
+
+<link rel="canonical" href="https://suiyelian.github.io/post/%E7%B1%BB%E7%BB%A7%E6%89%BF/" />
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="icon" href="/favicon.ico" />
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+<link href="/dist/jane.min.css?v=2.7.0" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+
+
+<meta property="og:title" content="如何在github.io搭建Hugo博客" />
+<meta property="og:description" content="类继承 0 经典类和新式类 首先得说明的是,Python的类分为经典类 和 新式类 经典类是python2.2之前的东西,但是在2.7还在兼容,但是在3" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://suiyelian.github.io/post/%E7%B1%BB%E7%BB%A7%E6%89%BF/" />
+
+
+
+<meta property="article:published_time" content="2018-03-22T00:00:00&#43;00:00"/>
+
+<meta property="article:modified_time" content="2018-03-22T00:00:00&#43;00:00"/>
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="如何在github.io搭建Hugo博客">
+<meta itemprop="description" content="类继承 0 经典类和新式类 首先得说明的是,Python的类分为经典类 和 新式类 经典类是python2.2之前的东西,但是在2.7还在兼容,但是在3">
+
+
+<meta itemprop="datePublished" content="2018-03-22T00:00:00&#43;00:00" />
+<meta itemprop="dateModified" content="2018-03-22T00:00:00&#43;00:00" />
+<meta itemprop="wordCount" content="2242">
+
+
+
+<meta itemprop="keywords" content="教程,github," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="如何在github.io搭建Hugo博客"/>
+<meta name="twitter:description" content="类继承 0 经典类和新式类 首先得说明的是,Python的类分为经典类 和 新式类 经典类是python2.2之前的东西,但是在2.7还在兼容,但是在3"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">Jane</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a><a href="https://gohugo.io">
+        <li class="mobile-menu-item">external-link</li>
+      </a>
+  </ul>
+</nav>
+
+  <header id="header" class="header container">
+    <div class="logo-wrapper">
+  <a href="/" class="logo">Jane</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        
+        <a class="menu-item-link" href="/">Home</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/post/">Archives</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/tags/">Tags</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/categories/">Categories</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="/about/">About</a>
+        
+      </li><li class="menu-item">
+        
+        <a class="menu-item-link" href="https://gohugo.io" target="_blank">
+          external-link
+          <i class="iconfont icon-new-window"></i>
+        </a>
+        
+      </li>
+  </ul>
+</nav>
+  </header>
+
+  <div id="mobile-panel">
+    <main id="main" class="main bg-llight">
+      <div class="content-wrapper">
+        <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">如何在github.io搭建Hugo博客</h1>
+      
+      <div class="post-meta">
+        <span class="post-time"> 2018-03-22 </span>
+        <div class="post-category">
+            
+              <a href="/categories/github/"> github </a>
+            
+          </div>
+        <span class="more-meta"> 约 2242 字 </span>
+        <span class="more-meta"> 预计阅读 5 分钟 </span>
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#center-类继承"><center>类继承</a></li>
+<li><a href="#0-经典类和新式类">0 经典类和新式类</a>
+<ul>
+<li>
+<ul>
+<li><a href="#0-1经典类和新式类的区别在于">0.1经典类和新式类的区别在于:</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#2-为什么不用经典类-要更换到新式类">2.为什么不用经典类，要更换到新式类</a>
+<ul>
+<li><a href="#c3算法">C3算法</a></li>
+<li><a href="#super和按照类名访问-混合使用带来的坑">super和按照类名访问 混合使用带来的坑</a></li>
+</ul></li>
+<li><a href="#最佳实现">最佳实现:</a>
+<ul>
+<li><a href="#super原理简介">super原理简介</a></li>
+<li><a href="#super实现原理">super实现原理</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      
+
+<h3 id="center-类继承"><center>类继承</h3>
+
+<h3 id="0-经典类和新式类">0 经典类和新式类</h3>
+
+<p>首先得说明的是,Python的类分为经典类 和 新式类
+经典类是python2.2之前的东西,但是在2.7还在兼容,但是在3之后的版本就只承认新式类了(我司很多还是python2.5，XXXXXX)
+新式类在python2.2之后的版本中都可以使用</p>
+
+<h5 id="0-1经典类和新式类的区别在于">0.1经典类和新式类的区别在于:</h5>
+
+<p>1.经典类是默认没有派生自某个基类的,而新式类是默认派生自object这个基类的:</p>
+
+<pre><code class="language-python"># old style
+class A():pass
+ 
+# new style
+class A(obejct):pass
+ 
+</code></pre>
+
+<p>2.经典类在类多重继承的时候是采用从左到右深度优先原则匹配方法的..而新式类是采用C3算法(不同于广度优先)进行匹配的</p>
+
+<p>3.经典类是没有<strong>MRO</strong>和instance.mro()调用的,而新式类是有的.
+###1 方法解析顺序 MRO
+面向对象中有一个重要特性是继承，如果是单重继承，要调用一个方法，只要按照继承的顺序查找基类即可。但多重继承时，MRO算法的选择（即基类的搜索顺序）非常微妙。
+Python先后有三种不同的MRO：经典方式、Python2.2 新式算法、Python2.3 新式算法(C3)。Python 3中只保留了最后一种，即C3算法。
+经典方式： 非常简单，深度优先，按定义从左到右
+例如：菱形继承结构，按经典方式，d类MRO为<strong><em>dbaca</em></strong>。缺点是如果c类重写了a类中得方法，c类的方法将不会被调用到。此问题即本地优先顺序问题</p>
+
+<pre><code class="language-python">class a:pass
+class b(a):pass
+class c(a):pass
+class d(b,c):pass
+</code></pre>
+
+<p>新式算法：还是经典方式，但出现重复的，只保留最后一个。上面的例子，MRO为 dbca。问题 单调性。
+比如d继承b,c 且b在c的前面。如果f继承d，那么f的mro中也应该和d的一样b在c的前面。单调性即继承时要保持顺序。(dbca)
+现在e继承c,b 且c在b的前面(ecba)。f继承d，e时，bc的顺序就没法决定了。无论怎样排都违反了单调性。</p>
+
+<h3 id="2-为什么不用经典类-要更换到新式类">2.为什么不用经典类，要更换到新式类</h3>
+
+<p>因为在经典类中的多重继承会有些问题…可能导致在继承树中的方法查询绕过后面的父类:</p>
+
+<pre><code class="language-python">
+class A():
+    def foo1(self):
+        print &quot;A&quot;
+class B(A):
+    def foo2(self):
+        pass
+class C(A):
+    def foo1(self):
+        print &quot;C&quot;
+class D(B, C):
+    pass
+ 
+d = D()
+d.foo1()
+</code></pre>
+
+<p>其中，Base 是父类，A, B 继承自 Base, C 继承自 A, B，它们的继承关系如下：</p>
+
+<p>按照经典类的查找顺序从左到右深度优先的规则，在访问d.foo1()的时候,D这个类是没有的..那么往上查找,先找到B,里面没有,深度优先,访问A,找到了foo1(),所以这时候调用的是A的foo1()，从而导致C重写的foo1()被绕过.</p>
+
+<p>所以python引入了新式类的概念,每个基类都继承自object并且,他的匹配规则也从深度优先换到了C3</p>
+
+<h4 id="c3算法">C3算法</h4>
+
+<p>C3算法的一个核心是merge</p>
+
+<pre><code>在merge列表中，如果第一个序列mro的第一个类是出现在其它序列，并且也是第一个，或者不出现其它序列，那么这个类就会从这些序列中删除，并合到访问顺序列表中
+</code></pre>
+
+<pre><code>L（Child（Base1，Base2）） = [ Child + merge（ L（Base1） ,  L（Base2） ,  Base1Base2 ）]
+L（object） = [ object ]
+L的性质：结果为列表，列表中至少有一个元素即类自己。
++        ： 添加到列表的末尾，即 [ A + B ] = [ A，B ]
+merge： ① 如果列表空则结束，非空 读merge中第一个列表的表头，
+               ② 查看该表头是否在 merge中所有列表的表尾中。
+               ②--&gt;③ 不在，则 放入 最终的L中，并从merge中的所有列表中删除，然后 回到①中
+               ②--&gt;④ 在，查看 当前列表是否是merge中的最后一个列表
+               ④--&gt;⑤ 不是 ，跳过当前列表，读merge中下一个列表的表头，然后 回到 ②中
+               ④--&gt;⑥ 是，异常。类定义失败。 
+表头： 列表的第一个元素
+表尾： 列表中表头以外的元素集合（可以为空）
+
+简单原则：
+子类永远在父类前面
+如果有多个父类，会根据它们在列表中的顺序被检查
+如果对下一个类存在两个合法的选择，选择第一个父类
+</code></pre>
+
+<h4 id="super和按照类名访问-混合使用带来的坑">super和按照类名访问 混合使用带来的坑</h4>
+
+<pre><code class="language-python">class A(object):
+  def __init__(self):
+   print &quot;enter A&quot;
+   print &quot;leave A&quot;
+ 
+ class B(object):
+  def __init__(self):
+   print &quot;enter B&quot;
+   print &quot;leave B&quot;
+ 
+ class C(A):
+  def __init__(self):
+   print &quot;enter C&quot;
+   super(C, self).__init__()
+   print &quot;leave C&quot;
+ 
+ class D(A):
+  def __init__(self):
+   print &quot;enter D&quot;
+   super(D, self).__init__()
+   print &quot;leave D&quot;
+ class E(B, C):
+  def __init__(self):
+   print &quot;enter E&quot;
+   B.__init__(self)
+   C.__init__(self)
+   print &quot;leave E&quot;
+ 
+ class F(E, D):
+  def __init__(self):
+   print &quot;enter F&quot;
+   E.__init__(self)
+   D.__init__(self)
+   print &quot;leave F&quot;
+   
+ enter F
+ enter E
+ enter B
+ leave B
+ enter C
+ enter D
+ enter A
+ leave A
+ leave D
+ leave C
+ leave E
+ enter D
+ enter A
+ leave A
+ leave D
+ leave F
+</code></pre>
+
+<p>可以看出来D和A的初始化函数被乱入了两次！
+按类名访问就相当于C语言之前的GOTO语句…乱跳,然后再用super按顺序访问..就有问题了</p>
+
+<p>所以建议就是要么一直用super,要么一直用按照类名访问</p>
+
+<h3 id="最佳实现">最佳实现:</h3>
+
+<p>避免多重继承
+super使用一致
+不要混用经典类和新式类
+调用父类的时候注意检查类层次</p>
+
+<h4 id="super原理简介">super原理简介</h4>
+
+<p>super 其实和父类没有实质性的关联。</p>
+
+<pre><code class="language-python">class Base(object):
+    def __init__(self):
+        print &quot;enter Base&quot;
+        print &quot;leave Base&quot;
+ 
+class A(Base):
+    def __init__(self):
+        print &quot;enter A&quot;
+        super(A, self).__init__()
+        print &quot;leave A&quot;
+ 
+class B(Base):
+    def __init__(self):
+        print &quot;enter B&quot;
+        super(B, self).__init__()
+        print &quot;leave B&quot;
+ 
+class C(A, B):
+    def __init__(self):
+        print &quot;enter C&quot;
+        super(C, self).__init__()
+        print &quot;leave C&quot;
+        
+继承树：
+      Base
+      /  \
+     /    \
+    A      B
+     \    /
+      \  /
+       C
+       
+&gt;&gt;&gt; c = C()
+enter C
+enter A
+enter B
+enter Base
+leave Base
+leave B
+leave A
+leave C
+
+MRO 列表：
+事实上，对于你定义的每一个类，Python 会计算出一个方法解析顺序（Method Resolution Order, MRO）列表，它代表了类继承的顺序，我们可以使用下面的方式获得某个类的 MRO 列表：
+
+&gt;&gt;&gt; C.mro()   # or C.__mro__ or C().__class__.mro()
+[__main__.C, __main__.A, __main__.B, __main__.Base, object]
+</code></pre>
+
+<h4 id="super实现原理">super实现原理</h4>
+
+<pre><code class="language-python">def super(cls, inst):
+    mro = inst.__class__.mro()
+    return mro[mro.index(cls) + 1]
+</code></pre>
+
+<p>其中，cls 代表类，inst 代表实例，上面的代码做了两件事：</p>
+
+<ol>
+<li>获取 inst 的 MRO 列表</li>
+<li>查找 cls 在当前 MRO 列表中的 index, 并返回它的下一个类，即 mro[index + 1]
+当你使用 super(cls, inst) 时，Python 会在 inst 的 MRO 列表上搜索 cls 的下一个类。</li>
+</ol>
+
+<p>现在，让我们回到前面的例子。</p>
+
+<p>首先看类 C 的 <strong>init</strong> 方法：</p>
+
+<pre><code class="language-python">super(C, self).__init__()
+</code></pre>
+
+<p>这里的 self 是当前 C 的实例，self.<strong>class</strong>.mro() 结果是：</p>
+
+<pre><code class="language-python">[__main__.C, __main__.A, __main__.B, __main__.Base, object]
+</code></pre>
+
+<p>可以看到，C 的下一个类是 A，于是，跳到了 A 的 <strong>init</strong>，这时会打印出 enter A，并执行下面一行代码：</p>
+
+<pre><code class="language-python">super(A, self).__init__()
+</code></pre>
+
+<p>注意，这里的 self 也是当前 C 的实例，MRO 列表跟上面是一样的，搜索 A 在 MRO 中的下一个类，发现是 B，于是，跳到了 B 的 <strong>init</strong>，这时会打印出 enter B，而不是 enter Base。</p>
+
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">xianmin</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">2018-03-22</span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">许可协议</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          
+          <a href="/tags/%E6%95%99%E7%A8%8B/">教程</a>
+          
+          <a href="/tags/github/">github</a>
+          
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/jane-theme-preview/">
+            <span class="next-text nav-default">Jane Theme Preview</span>
+            <span class="prev-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+    
+
+  
+
+  
+
+  <div id="comments-gitment"></div>
+  <link rel="stylesheet" href="/lib/gitment/gitment-0.0.3.min.css">
+    <script src="/lib/gitment/gitment-0.0.3.min.js"></script>
+  <script type="text/javascript">
+  const gitment = new Gitment({
+    id: '类继承.md',
+    title: '如何在github.io搭建Hugo博客',
+    link: decodeURI(location.href),
+    desc: '类继承 0 经典类和新式类 首先得说明的是,Python的类分为经典类 和 新式类 经典类是python2.2之前的东西,但是在2.7还在兼容,但是在3',
+    owner: 'suiyelian',
+    repo: 'comments',
+    oauth: {
+      client_id: '342be557e7c9733e2bae',
+      client_secret: '446e8096097522a8055971f80af329b6400023a3'
+    }
+  })
+  gitment.render('comments-gitment')
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://github.com/imsun/gitment">comments powered by gitment.</a></noscript>
+  </article>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:your@email.com" rel="me" class="iconfont icon-email" 
+        title="email" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-stack-overflow" 
+        title="stack-overflow" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-twitter" 
+        title="twitter" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-facebook" 
+        title="facebook" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-linkedin" 
+        title="linkedin" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-google" 
+        title="google" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-github" 
+        title="github" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-weibo" 
+        title="weibo" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-zhihu" 
+        title="zhihu" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-douban" 
+        title="douban" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-pocket" 
+        title="pocket" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-tumblr" 
+        title="tumblr" target="_blank">
+      </a>
+      <a href="http://localhost:1313" rel="me" class="iconfont icon-instagram" 
+        title="instagram" target="_blank">
+      </a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me" class="iconfont icon-gitlab" 
+        title="gitlab" target="_blank">
+      </a>
+      <a href="http://en.xianmin.org/hugo-theme-jane/" rel="me" class="iconfont icon-goodreads" 
+        title="goodreads" target="_blank">
+      </a>
+  <a href="https://suiyelian.github.io/index.xml" type="application/rss+xml" class="iconfont icon-rss" 
+    title="rss" target="_blank">
+  </a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy; 
+    
+      2017 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">xianmin</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+<script src="/lib/highlight/highlight.pack.js?v=20171001"></script>
+<script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+<script type="text/javascript" src="/dist/jane.min.js?v=2.7.0"></script>
+
+
+
+
+
+</body>
+</html>

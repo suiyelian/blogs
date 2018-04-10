@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>教程 on Jane - A super concise theme for Hugo</title>
+    <link>https://suiyelian.github.io/tags/%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 教程 on Jane - A super concise theme for Hugo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 22 Mar 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://suiyelian.github.io/tags/%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何在github.io搭建Hugo博客</title>
+      <link>https://suiyelian.github.io/post/%E7%B1%BB%E7%BB%A7%E6%89%BF/</link>
+      <pubDate>Thu, 22 Mar 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://suiyelian.github.io/post/%E7%B1%BB%E7%BB%A7%E6%89%BF/</guid>
+      <description>类继承 0 经典类和新式类 首先得说明的是,Python的类分为经典类 和 新式类 经典类是python2.2之前的东西,但是在2.7还在兼容,但是在3</description>
+    </item>
+    
+  </channel>
+</rss>

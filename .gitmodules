@@ -6,3 +6,7 @@
 	path = public
 	url = git@github.com:suiyelian/suiyelian.github.io.git
 	branch = master
+[submodule "public/public"]
+	path = public/public
+	url = https://github.com/suiyelian/suiyelian.github.io.git
+	branch = master
